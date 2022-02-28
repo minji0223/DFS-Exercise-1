@@ -1,0 +1,41 @@
+<div class="word">
+  JavaScript
+  <div>
+    <div class="red-ball">
+      <div>
+        <style>
+          .word {
+            font-size: 20vw;
+            width: 100vw;
+            line-height: 100vh;
+            text-align: center;
+            color: pink;
+          }
+          .red-ball {
+            background: red;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: fixed;
+          }
+        </style>
+
+        <script>
+          var redball = document.querySelector(".red-ball");
+          console.log(redball);
+
+          window.addEventListener("mousemove", (event) => {
+            // Track the position of your mouse
+            var x = event.clientX;
+            var y = event.clientY;
+            console.log(`${x} : ${y}`);
+
+            // Make redball follow your cursor
+            redball.style.top = y + "px";
+            redball.style.left = x + "px";
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
